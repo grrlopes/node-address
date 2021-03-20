@@ -1,11 +1,11 @@
 import { Uf } from "@entities/Uf";
 import { IUFStore } from "@infraS/IUBrazilFstore";
 
-export class ReadUFUseCase {
+class ReadUFUseCase {
   constructor(private ufStore: IUFStore) {}
 
   async listStateByUf(uf: string): Promise<Uf> {
-    const _uf = uf.toUpperCase()
+    const _uf = uf.toUpperCase();
     return await this.ufStore.findStateByUF(_uf);
   }
 
@@ -14,3 +14,5 @@ export class ReadUFUseCase {
     return ufs;
   }
 }
+
+export { ReadUFUseCase };

@@ -1,4 +1,4 @@
-export class Uf {
+class Uf {
   public id?: number;
   public uf?: string;
   public state?: string;
@@ -9,3 +9,5 @@ export class Uf {
     this.uf = uf;
   }
 }
+
+export { Uf };
