@@ -1,9 +1,9 @@
 class Cep {
-  public addrcep: any;
+  public addrcep: any
 
-  constructor(addrcep: any) {
-    this.addrcep = addrcep;
+  constructor (addrcep: any) {
+    this.addrcep = addrcep
   }
 }
 
-export { Cep };
+export { Cep }

@@ -1,26 +1,26 @@
-import Axios, { AxiosInstance } from "axios";
-import { ICepProvider, ICepRespProvider } from "@infraP/IViaCEPprovider";
+import Axios, { AxiosInstance } from 'axios'
+import { ICepProvider, ICepRespProvider } from '@infraP/IViaCEPprovider'
 
 class ViaCEPstore implements ICepProvider {
-  private axios: AxiosInstance;
-  constructor() {
+  private readonly axios: AxiosInstance
+  constructor () {
     this.axios = Axios.create({
-      baseURL: "https://viacep.com.br/ws/",
-    });
+      baseURL: 'https://viacep.com.br/ws/'
+    })
   }
 
-  async findAddrByCep(addrcep: string): Promise<ICepRespProvider> {
+  async findAddrByCep (addrcep: string): Promise<ICepRespProvider> {
     try {
-      const search = `${addrcep}/json`;
-      const result = await this.axios.get(search);
+      const search = `${addrcep}/json`
+      const result = await this.axios.get(search)
       if (!result.data) {
-        throw result;
+        throw result
       }
-      return result.data;
+      return result.data
     } catch (error) {
-      return error;
+      return error
     }
   }
 }
 
-export { ViaCEPstore };
+export { ViaCEPstore }

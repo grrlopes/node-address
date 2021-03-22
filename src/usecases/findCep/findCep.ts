@@ -1,22 +1,22 @@
-import { FindCepUseCase } from "./findCepUseCase";
+import { FindCepUseCase } from './findCepUseCase'
 
 class findCep {
-  constructor(private findcep: FindCepUseCase) {}
+  constructor (private readonly findcep: FindCepUseCase) {}
 
-  async searchAddrByCep(addrcep: any) {
+  async searchAddrByCep (addrcep: any) {
     try {
-      const result = await this.findcep.searchAddrByCep(addrcep);
+      const result = await this.findcep.searchAddrByCep(addrcep)
       if (!result.localidade) {
-        throw result;
+        throw result
       }
       return result
     } catch (error) {
       return {
         code: error.response.status,
-        message: error.response.statusText,
+        message: error.response.statusText
       }
     }
   }
 }
 
-export { findCep };
+export { findCep }

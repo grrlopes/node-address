@@ -1,13 +1,13 @@
 class Uf {
-  public id?: number;
-  public uf?: string;
-  public state?: string;
+  public id?: number
+  public uf?: string
+  public state?: string
 
-  constructor(id?: number, state?: string, uf?: string) {
-    this.id = id;
-    this.state = state;
-    this.uf = uf;
+  constructor (id?: number, state?: string, uf?: string) {
+    this.id = id
+    this.state = state
+    this.uf = uf
   }
 }
 
-export { Uf };
+export { Uf }
