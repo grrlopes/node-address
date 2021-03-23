@@ -13,9 +13,6 @@ class ViaCEPstore implements ICepProvider {
     try {
       const search = `${addrcep}/json`
       const result = await this.axios.get(search)
-      if (!result.data) {
-        throw result
-      }
       return result.data
     } catch (error) {
       return error

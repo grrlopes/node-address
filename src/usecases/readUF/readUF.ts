@@ -13,6 +13,11 @@ class ReadUF {
     const states = await this.readUFUsecase.listAllStates()
     return states
   }
+
+  async listCityByUf (uf: string) {
+    const city = await this.readUFUsecase.listCityByUf(uf)
+    return city
+  }
 }
 
 export { ReadUF }
