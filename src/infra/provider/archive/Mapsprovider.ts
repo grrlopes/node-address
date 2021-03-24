@@ -3,14 +3,14 @@ import { IMapProvider } from "@infraP/IMapsprovider";
 
 class MAPSprovider implements IMapProvider {
   private readonly axios: AxiosInstance;
-  constructor() {
+  constructor () {
     this.axios = Axios.create({
       baseURL: `${process.env.GOOGLE_MAPS_URL}=
-      ${process.env.GOOGLE_MAPS_API_KEY}&input=`,
+      ${process.env.GOOGLE_MAPS_API_KEY}&input=`
     });
   }
 
-  async findPlacebyInput(place: string): Promise<any> {
+  async findPlacebyInput (place: string): Promise<any> {
     try {
       const search = place;
       const result = await this.axios.get(search);
@@ -18,7 +18,7 @@ class MAPSprovider implements IMapProvider {
     } catch (error) {
       return {
         code: error.response.status,
-        msg: error.response.statusText,
+        msg: error.response.statusText
       };
     }
   }

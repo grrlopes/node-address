@@ -11,24 +11,24 @@ describe("### FIND Map (findMap) ###", () => {
           geometry: {
             location: {
               lat: -23.567271,
-              lng: -46.7089687,
+              lng: -46.7089687
             },
             viewport: {
               northeast: {
                 lat: -23.56585652010728,
-                lng: -46.70758072010728,
+                lng: -46.70758072010728
               },
               southwest: {
                 lat: -23.56855617989272,
-                lng: -46.71028037989272,
-              },
-            },
+                lng: -46.71028037989272
+              }
+            }
           },
           name:
-            "FDTE - Fundação para o Desenvolvimento Tecnológico da Engenharia",
-        },
+            "FDTE - Fundação para o Desenvolvimento Tecnológico da Engenharia"
+        }
       ],
-      status: "OK",
+      status: "OK"
     });
   });
 

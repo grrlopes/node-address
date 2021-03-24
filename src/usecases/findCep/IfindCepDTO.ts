@@ -1,5 +1,5 @@
 interface IFindCepDTO {
-  addrcep: string
+  addrcep: string;
 }
 
-export { IFindCepDTO }
+export { IFindCepDTO };
