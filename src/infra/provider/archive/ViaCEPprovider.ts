@@ -5,7 +5,7 @@ class ViaCEPstore implements ICepProvider {
   private readonly axios: AxiosInstance
   constructor () {
     this.axios = Axios.create({
-      baseURL: 'https://viacep.com.br/ws/'
+      baseURL: process.env.VIA_CEP
     })
   }
 

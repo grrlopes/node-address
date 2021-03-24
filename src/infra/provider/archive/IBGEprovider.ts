@@ -5,7 +5,7 @@ class IBGEprovider implements ICityIBGEProvider {
   private readonly axios: AxiosInstance
   constructor () {
     this.axios = Axios.create({
-      baseURL: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/'
+      baseURL: process.env.IBGE_URL
     })
   }
 
