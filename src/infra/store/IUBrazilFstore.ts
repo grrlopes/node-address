@@ -1,4 +1,4 @@
-import { Uf } from '@entities/Uf'
+import { Uf } from "../../entities/Uf"; //'@entities/Uf'
 
 enum ECityUF {
   AC, 'Acre',

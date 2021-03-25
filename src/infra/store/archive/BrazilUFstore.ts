@@ -1,5 +1,5 @@
-import { Uf } from '@entities/Uf'
-import { IUFStore, ICityUFStore } from '@infraS/IUBrazilFstore'
+import { Uf } from "../../../entities/Uf"; //'@entities/Uf'
+import { IUFStore, ICityUFStore } from "../../store/IUBrazilFstore"; //'@infraS/IUBrazilFstore'
 
 class BrazilUFstore implements IUFStore {
   private readonly cityUF = ICityUFStore

@@ -1,5 +1,5 @@
-import { Cep } from "@entities/Cep";
-import { ICepProvider, ICepRespProvider } from "@infraP/IViaCEPprovider";
+import { Cep } from "../../entities/Cep"; //"@entities/Cep";
+import { ICepProvider, ICepRespProvider } from "../../infra/provider/IViaCEPprovider"; //"@infraP/IViaCEPprovider";
 import { IFindCepDTO } from "./IfindCepDTO";
 
 class FindCepUseCase {

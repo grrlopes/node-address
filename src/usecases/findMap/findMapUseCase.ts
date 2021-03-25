@@ -1,5 +1,5 @@
-import { Map } from "@entities/Map";
-import { IMapProvider } from "@infraP/IMapsprovider";
+import { Map } from "../../entities/Map"; //"@entities/Map";
+import { IMapProvider } from "../../infra/provider/IMapsprovider"; //"@infraP/IMapsprovider";
 
 class FindMapUseCase {
   constructor (private readonly mapProvider: IMapProvider) {}

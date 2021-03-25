@@ -1,4 +1,4 @@
-import { Uf } from "@entities/Uf";
+import { Uf } from "../../entities/Uf" //"@entities/Uf";
 import { ReadUFUseCase } from "./readUFUseCase";
 
 class ReadUF {

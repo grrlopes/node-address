@@ -1,8 +1,8 @@
-import { Uf } from "@entities/Uf";
-import { BrazilUFstore } from "@infraS/archive/BrazilUFstore";
-import { IBGEprovider } from "@infraP/archive/IBGEprovider";
-import { ReadUFUseCase } from "@usecases/readUF/readUFUseCase";
-import { ReadUF } from "@usecases/readUF/readUF";
+import { Uf } from "../../entities/Uf"; //"@entities/Uf";
+import { BrazilUFstore } from "../../infra/store/archive/BrazilUFstore"; //"@infraS/archive/BrazilUFstore";
+import { IBGEprovider } from "../../infra/provider/archive/IBGEprovider"; //"@infraP/archive/IBGEprovider";
+import { ReadUFUseCase } from "../../usecases/readUF/readUFUseCase"; //"@usecases/readUF/readUFUseCase";
+import { ReadUF } from "../../usecases/readUF/readUF"; //"@usecases/readUF/readUF";
 
 const uf = new Uf();
 

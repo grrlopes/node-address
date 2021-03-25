@@ -1,4 +1,4 @@
-import { ViaCEPstore } from "@infraP/archive/ViaCEPprovider";
+import { ViaCEPstore } from "../../infra/provider/archive/ViaCEPprovider"; //"@infraP/archive/ViaCEPprovider";
 import { findCep } from "./findCep";
 import { FindCepUseCase } from "./findCepUseCase";
 

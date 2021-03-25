@@ -1,6 +1,6 @@
-import { Uf } from "@entities/Uf";
-import { IUFStore } from "@infraS/IUBrazilFstore";
-import { ICityIBGEProvider } from "@infraP/IIBGEprovider";
+import { Uf } from "../../entities/Uf"; //"@entities/Uf";
+import { IUFStore } from "../../infra/store/IUBrazilFstore"; //"@infraS/IUBrazilFstore";
+import { ICityIBGEProvider } from "../../infra/provider/IIBGEprovider"; //"@infraP/IIBGEprovider";
 
 class ReadUFUseCase {
   constructor (

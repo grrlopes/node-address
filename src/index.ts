@@ -1,11 +1,11 @@
-import { findcep } from "@usecases/findCep";
-import { readUF } from "@usecases/readUF";
-import { findmap } from "@usecases/findMap";
-export { findcep } from "@usecases/findCep";
+import { findcep } from "./usecases/findCep"; //"@usecases/findCep";
+import { readUF } from "./usecases/readUF"; //"@usecases/readUF";
+import { findmap } from "./usecases/findMap"; //"@usecases/findMap";
+export { findcep } from "./usecases/findCep"; //"@usecases/findCep";
 
-export { readUF } from "@usecases/readUF";
+export { readUF } from "./usecases/readUF"; //"@usecases/readUF";
 
-export { findmap } from "@usecases/findMap";
+export { findmap } from "./usecases/findMap"; //"@usecases/findMap";
 
 /**
  * Class should be used by fieldlink-backend.
