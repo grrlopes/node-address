@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    image: node:14.16.0
+    container_name: nodejs_address
+    environment:
+      VIA_CEP: ${VIA_CEP}
+      GOOGLE_MAPS_URL: ${GOOGLE_MAPS_URL}
+      GOOGLE_MAPS_API_KEY: ${GOOGLE_MAPS_API_KEY}
+      IBGE_URL: ${IBGE_URL}
+    volumes:
+      - .:/usr/app
+    working_dir: /usr/app
+    command: ./scripts/start.sh

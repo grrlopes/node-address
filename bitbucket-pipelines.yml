@@ -1,0 +1,29 @@
+image: atlassian/default-image:2
+
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        name: Build and Test
+    - step:
+        script:
+          - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
+          - docker-compose run -T app ./scripts/start.sh
+          - docker-compose down
+  tags:
+    npm-*:
+      - step:
+          name: Build and Test
+          script:
+            - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
+            - docker-compose run -T app ./scripts/start.sh
+            - docker-compose down
+      - step:
+          name: Deploy to Production
+          deployment: Production
+          script:
+            - pipe: atlassian/npm-publish:0.3.1
+              variables:
+                NPM_TOKEN: $NPM_TOKEN
