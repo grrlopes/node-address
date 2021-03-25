@@ -9,7 +9,7 @@ pipelines:
         name: Build and Test
         script:
           - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
-          - docker-compose run -T address
+          - docker-compose run -T app ./scripts/start.sh
           - docker-compose down
   tags:
     npm-*:
@@ -17,12 +17,17 @@ pipelines:
           name: Build and Test
           script:
             - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
-            - docker-compose run -T address
+            - docker-compose run -T app ./scripts/start.sh
             - docker-compose down
       - step:
           name: Deploy to Production
+          image: node:14.16.0
           deployment: Production
           script:
+            - npm install
+            - npm run build
+          artifacts:
+            - dist/**
             - pipe: atlassian/npm-publish:0.3.1
               variables:
                 NPM_TOKEN: $NPM_TOKEN
