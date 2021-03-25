@@ -7,7 +7,6 @@ pipelines:
   default:
     - step:
         name: Build and Test
-    - step:
         script:
           - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
           - docker-compose run -T app ./scripts/start.sh
