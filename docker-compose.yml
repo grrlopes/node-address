@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  app:
+  address:
     image: node:14.16.0
     container_name: nodejs_address
     environment:
