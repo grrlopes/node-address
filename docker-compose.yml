@@ -12,4 +12,4 @@ services:
     volumes:
       - .:/usr/app
     working_dir: /usr/app
-    command: ./scripts/start.sh
+    command: bash ./scripts/start.sh
