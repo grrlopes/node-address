@@ -1,12 +1,13 @@
+import { ICepRespProvider } from "../../infra/provider/IViaCEPprovider";
 import { FindCepUseCase } from "./findCepUseCase";
 
 class findCep {
   constructor (private readonly findcep: FindCepUseCase) {}
   /**
    * @param {String} addrcep The String to cep like 01501-000
-   * @returns {Object} It shall return object content cep, address and son on
+   * @returns {ICepRespProvider} It shall return object content cep, address and son on
    **/
-  async searchAddrByCep (addrcep: any) {
+  async searchAddrByCep (addrcep: any): Promise<ICepRespProvider>{
     try {
       const result = await this.findcep.searchAddrByCep(addrcep);
       if (!result.localidade) {
