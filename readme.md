@@ -1,4 +1,4 @@
-# nodejs-address - NodeJs CEP UF
+# nodejs-address
 
 ## Dependencies:
 
@@ -12,3 +12,11 @@ npm v6.14.11
 To run docker, just run `docker-compose up` and the start script will run until the tests.
 
 To run locally, use `npm run test` to run the tests.
+
+Do not forget to put down environment variable such as :
+```
+VIA_CEP
+GOOGLE_MAPS_URL
+GOOGLE_MAPS_API_KEY
+IBGE_URL
+```
