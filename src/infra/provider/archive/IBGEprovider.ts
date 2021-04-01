@@ -1,5 +1,5 @@
 import Axios, { AxiosInstance } from 'axios'
-import { ICityIBGEProvider, ICityIBGERespProvider } from "../../provider/IIBGEprovider"; //'@infraP/IIBGEprovider'
+import { ICityIBGEProvider, ICityIBGERespProvider, IUfIBGERespProvider } from "../../provider/IIBGEprovider"; //'@infraP/IIBGEprovider'
 
 class IBGEprovider implements ICityIBGEProvider {
   private readonly axios: AxiosInstance
@@ -7,6 +7,17 @@ class IBGEprovider implements ICityIBGEProvider {
     this.axios = Axios.create({
       baseURL: process.env.IBGE_URL
     })
+  }
+  async findAllUF(): Promise<IUfIBGERespProvider> {
+    try {
+      const result = await this.axios.get("");
+      return result.data
+    } catch (error) {
+      return {
+        code: error.response.status,
+        msg: error.response.statusText
+      }
+    }
   }
 
   async findCityByUF (addrcep: string): Promise<ICityIBGERespProvider> {

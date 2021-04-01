@@ -1,3 +1,4 @@
+import { IUfIBGERespProvider } from "@infraP/IIBGEprovider";
 import { Uf } from "../../entities/Uf" //"@entities/Uf";
 import { ReadUFUseCase } from "./readUFUseCase";
 
@@ -18,9 +19,9 @@ class ReadUF {
    * @param {Empty} empty It should be empty param
    * @returns {Array} an array e.g [ { id: 1, state: 'Acre', uf: 'AC' } ]
    **/
-  async listAllStates (): Promise<Uf[]> {
+  async listAllStates (): Promise<IUfIBGERespProvider> {
     const states = await this.readUFUsecase.listAllStates();
-    return states;
+    return states
   }
 
   /**

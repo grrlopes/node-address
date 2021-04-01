@@ -1,11 +1,11 @@
 import { Uf } from "../../entities/Uf"; //"@entities/Uf";
 import { IUFStore } from "../../infra/store/IUBrazilFstore"; //"@infraS/IUBrazilFstore";
-import { ICityIBGEProvider } from "../../infra/provider/IIBGEprovider"; //"@infraP/IIBGEprovider";
+import { ICityIBGEProvider, IUfIBGERespProvider } from "../../infra/provider/IIBGEprovider"; //"@infraP/IIBGEprovider";
 
 class ReadUFUseCase {
   constructor (
     private readonly ufStore: IUFStore,
-    private readonly cityProvider: ICityIBGEProvider
+    private readonly cityProvider: ICityIBGEProvider,
   ) {}
 
   async listStateByUf (uf: string): Promise<Uf> {
@@ -13,8 +13,8 @@ class ReadUFUseCase {
     return await this.ufStore.findStateByUF(_uf);
   }
 
-  async listAllStates (): Promise<Uf[]> {
-    const ufs = await this.ufStore.findAllUF();
+  async listAllStates (): Promise<IUfIBGERespProvider> {
+    const ufs = await this.cityProvider.findAllUF();
     return ufs;
   }
 

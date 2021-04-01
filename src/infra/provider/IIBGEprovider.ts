@@ -5,8 +5,24 @@ interface ICityIBGERespProvider {
   msg?: string;
 }
 
-interface ICityIBGEProvider {
-  findCityByUF: (addrce: string) => Promise<ICityIBGERespProvider>;
+interface IUfRegioAUX {
+  id: number,
+  sigla: string,
+  nome: string,
 }
 
-export { ICityIBGEProvider, ICityIBGERespProvider };
+interface IUfIBGERespProvider {
+  id?: number;
+  sigla?: string;
+  nome?: string;
+  regiao?: IUfRegioAUX
+  code?: number;
+  msg?: string;
+}
+
+interface ICityIBGEProvider {
+  findCityByUF: (addrce: string) => Promise<ICityIBGERespProvider>;
+  findAllUF: () => Promise<IUfIBGERespProvider>
+}
+
+export { ICityIBGEProvider, ICityIBGERespProvider, IUfIBGERespProvider };
