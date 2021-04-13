@@ -15,6 +15,11 @@ class findCep {
       }
       return result;
     } catch (error) {
+      if (error.erro) {
+        return {
+          message: "Cep is out of range!"
+        }
+      }
       return {
         code: error.response.status,
         message: error.response.statusText

@@ -24,4 +24,15 @@ describe("### FIND CEP (findCep) ###", () => {
       message: "Bad Request"
     });
   });
+
+  /*
+    APi viacep has an unique behavior on how to deal with cep out of
+    range in which it return object { error = true }
+  */
+  test("Should evaluete cep is out of range", async () => {
+    const address = await findcep.searchAddrByCep("01001-009");
+    expect(address).toEqual({
+      message: "Cep is out of range!"
+    });
+  });
 });
