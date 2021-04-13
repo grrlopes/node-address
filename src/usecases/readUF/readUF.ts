@@ -10,7 +10,7 @@ class ReadUF {
    * @returns {Object} an object e.g
    * { id: 49, state: 'Sao Paulo', uf: 'SP' }
    **/
-  async listStateByUf (uf: string): Promise<Uf> {
+  async listStateByUf (uf: string): Promise<IUfIBGERespProvider> {
     const state = await this.readUFUsecase.listStateByUf(uf);
     return state;
   }

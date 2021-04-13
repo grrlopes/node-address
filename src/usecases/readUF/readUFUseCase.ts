@@ -8,9 +8,9 @@ class ReadUFUseCase {
     private readonly cityProvider: ICityIBGEProvider,
   ) {}
 
-  async listStateByUf (uf: string): Promise<Uf> {
+  async listStateByUf (uf: string): Promise<IUfIBGERespProvider> {
     const _uf = uf.toUpperCase();
-    return await this.ufStore.findStateByUF(_uf);
+    return await this.cityProvider.findStateByUF(_uf);
   }
 
   async listAllStates (): Promise<IUfIBGERespProvider> {

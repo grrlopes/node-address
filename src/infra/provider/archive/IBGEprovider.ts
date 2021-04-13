@@ -8,6 +8,19 @@ class IBGEprovider implements ICityIBGEProvider {
       baseURL: process.env.IBGE_URL
     })
   }
+
+  async findStateByUF (uf: string): Promise<IUfIBGERespProvider> {
+    try {
+      const result = await this.axios.get(uf);
+      return result.data
+    } catch (error) {
+      return {
+        code: error.response.status,
+        msg: error.response.statusText
+      }
+    }
+  };
+
   async findAllUF(): Promise<IUfIBGERespProvider> {
     try {
       const result = await this.axios.get("");

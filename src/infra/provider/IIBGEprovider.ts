@@ -22,7 +22,8 @@ interface IUfIBGERespProvider {
 
 interface ICityIBGEProvider {
   findCityByUF: (addrce: string) => Promise<ICityIBGERespProvider>;
-  findAllUF: () => Promise<IUfIBGERespProvider>
+  findAllUF: () => Promise<IUfIBGERespProvider>;
+  findStateByUF: (uf: string) => Promise<IUfIBGERespProvider>;
 }
 
 export { ICityIBGEProvider, ICityIBGERespProvider, IUfIBGERespProvider };

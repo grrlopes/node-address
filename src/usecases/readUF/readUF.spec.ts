@@ -8,7 +8,7 @@ describe("### READ UF (readUF) ###", () => {
 
   it("Should retrieve state by UF", async () => {
     const statebyUF = await readUF.listStateByUf("AM");
-    expect(statebyUF.state).toStrictEqual("Amazonas");
+    expect(statebyUF.nome).toStrictEqual("Amazonas");
   });
 
   it("Should retrieve city by UF", async () => {
