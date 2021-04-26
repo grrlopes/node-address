@@ -7,10 +7,10 @@ class findMap {
    * @param {Object} place The String to place as {place: "FDTE"}
    * @returns {Object} It must return object content name, geolocation...
    **/
-  async searchPlacebyInput (data: IFindMapDTO) {
+  async searchLocation (data: IFindMapDTO): Promise<any> {
     try {
-      const place = this.findmap.searchPlacebyInput(data.place);
-      return await place;
+      const place = await this.findmap.searchLocation(data.place);
+      return place;
     } catch (error) {
       return error;
     }

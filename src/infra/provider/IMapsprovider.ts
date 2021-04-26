@@ -4,7 +4,7 @@ interface IMapRespProvider {
 }
 
 interface IMapProvider {
-  findPlacebyInput: (place: string) => Promise<any>;
+  findLocation: (place: string) => Promise<any>;
 }
 
 export { IMapProvider, IMapRespProvider };

@@ -4,9 +4,9 @@ import { IMapProvider } from "../../infra/provider/IMapsprovider"; //"@infraP/IM
 class FindMapUseCase {
   constructor (private readonly mapProvider: IMapProvider) {}
 
-  async searchPlacebyInput (place: string) {
+  async searchLocation (place: string) {
     const map = new Map(place);
-    return await this.mapProvider.findPlacebyInput(map.place);
+    return await this.mapProvider.findLocation(map.place);
   }
 }
 

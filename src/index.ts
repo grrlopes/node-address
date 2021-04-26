@@ -51,7 +51,7 @@ class address {
    * @returns {Object} It must return object content name, geolocation...
    **/
   async searchPlacebyInput (place: string) {
-    return await findmap.searchPlacebyInput({ place: place });
+    return await findmap.searchLocation({ place: place });
   }
 }
 

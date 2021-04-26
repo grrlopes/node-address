@@ -6,11 +6,11 @@ class MAPSprovider implements IMapProvider {
   constructor () {
     this.axios = Axios.create({
       baseURL: `${process.env.GOOGLE_MAPS_URL}=
-      ${process.env.GOOGLE_MAPS_API_KEY}&input=`
+      ${process.env.GOOGLE_MAPS_API_KEY}&address=`
     });
   }
 
-  async findPlacebyInput (place: string): Promise<any> {
+  async findLocation (place: string): Promise<any> {
     try {
       const search = place;
       const result = await this.axios.get(search);
