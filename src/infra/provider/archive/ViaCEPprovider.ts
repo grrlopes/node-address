@@ -1,5 +1,5 @@
 import Axios, { AxiosInstance } from 'axios'
-import { ICepProvider, ICepRespProvider } from "../../provider/IViaCEPprovider"; //'@infraP/IViaCEPprovider'
+import { ICepProvider, ICepRespProvider } from "../../provider/IViaCEPprovider";
 
 class ViaCEPstore implements ICepProvider {
   private readonly axios: AxiosInstance

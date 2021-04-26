@@ -1,6 +1,6 @@
-import { IBGEprovider } from "../../infra/provider/archive/IBGEprovider"; //"@infraP/archive/IBGEprovider";
-import { ReadUFUseCase } from "../../usecases/readUF/readUFUseCase"; //"@usecases/readUF/readUFUseCase";
-import { ReadUF } from "../../usecases/readUF/readUF"; //"@usecases/readUF/readUF";
+import { IBGEprovider } from "../../infra/provider/archive/IBGEprovider";
+import { ReadUFUseCase } from "../../usecases/readUF/readUFUseCase";
+import { ReadUF } from "../../usecases/readUF/readUF";
 
 const cityProvider = new IBGEprovider();
 

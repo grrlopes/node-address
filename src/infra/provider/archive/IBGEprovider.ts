@@ -1,5 +1,5 @@
 import Axios, { AxiosInstance } from 'axios'
-import { ICityIBGEProvider, ICityIBGERespProvider, IUfIBGERespProvider } from "../../provider/IIBGEprovider"; //'@infraP/IIBGEprovider'
+import { ICityIBGEProvider, ICityIBGERespProvider, IUfIBGERespProvider } from "../../provider/IIBGEprovider";
 
 class IBGEprovider implements ICityIBGEProvider {
   private readonly axios: AxiosInstance

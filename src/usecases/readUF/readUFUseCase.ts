@@ -1,4 +1,4 @@
-import { ICityIBGEProvider, IUfIBGERespProvider } from "../../infra/provider/IIBGEprovider"; //"@infraP/IIBGEprovider";
+import { ICityIBGEProvider, IUfIBGERespProvider } from "../../infra/provider/IIBGEprovider";
 
 class ReadUFUseCase {
   constructor (

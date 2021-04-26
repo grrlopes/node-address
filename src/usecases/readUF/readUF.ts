@@ -1,5 +1,4 @@
 import { IUfIBGERespProvider } from "@infraP/IIBGEprovider";
-import { Uf } from "../../entities/Uf" //"@entities/Uf";
 import { ReadUFUseCase } from "./readUFUseCase";
 
 class ReadUF {

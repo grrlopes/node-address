@@ -1,5 +1,5 @@
 import Axios, { AxiosInstance } from "axios";
-import { IMapProvider } from "../../provider/IMapsprovider"; //"@infraP/IMapsprovider";
+import { IMapProvider } from "../../provider/IMapsprovider";
 
 class MAPSprovider implements IMapProvider {
   private readonly axios: AxiosInstance;
