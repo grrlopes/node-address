@@ -76,7 +76,9 @@ export = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: "<rootDir>",
+  }),
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -130,7 +132,6 @@ export = {
 
   // The test environment that will be used for testing
   testEnvironment: "node",
-
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
@@ -180,4 +181,4 @@ export = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

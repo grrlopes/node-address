@@ -1,5 +1,5 @@
 {
-  "name": "@fieldlink/nodejs-address",
+  "name": "node-address",
   "version": "3.0.0",
   "description": "",
   "main": "dist/index.js",

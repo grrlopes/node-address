@@ -3,7 +3,7 @@ version: "3"
 services:
   address:
     image: node:14.16.0
-    container_name: nodejs_address
+    container_name: node_address
     environment:
       VIA_CEP: ${VIA_CEP}
       GOOGLE_MAPS_URL: ${GOOGLE_MAPS_URL}
